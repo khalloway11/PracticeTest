@@ -11,5 +11,6 @@ package practicetest;
  * @author khalloway
  */
 public interface DataStrat {
-  
+    public abstract Product findProduct(String prodId);
+    public abstract Customer findCustomer(String custId);
 }
