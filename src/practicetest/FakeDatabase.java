@@ -14,21 +14,21 @@ public class FakeDatabase implements DataStrat{
     private Customer[] customers;
     private Product[] products;
     
-    //@Override
+    @Override
     public Product findProduct(String prodId){
-        for(int i = 0; i < products.length; i++){
-            if(products[i].getProdId().equals(prodId)){
-                return products[i];
+        for (Product product : products) {
+            if (product.getProdId().equals(prodId)) {
+                return product;
             }
         }
         return null;
     }
     
-    //@Override
+    @Override
     public Customer findCustomer(String custId){
-        for(int i = 0; i < customers.length; i++){
-            if(customers[i].getCustId().equals(custId)){
-                return customers[i];
+        for (Customer customer : customers) {
+            if (customer.getCustId().equals(custId)) {
+                return customer;
             }
         }
         return null;
