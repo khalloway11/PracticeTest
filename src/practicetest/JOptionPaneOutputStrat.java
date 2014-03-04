@@ -5,12 +5,15 @@
  */
 
 package practicetest;
+
 import java.util.Date;
 
 /**
  *
  * @author khalloway
  */
-public interface OutputStrategy {
-    public abstract void printOutput(Customer c, LineItem[] l, Date d);
+public class JOptionPaneOutputStrat implements OutputStrategy{
+    public void printOutput(Customer c, LineItem[] l, Date d){
+        //output to JOptionPane
+    }
 }
