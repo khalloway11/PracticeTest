@@ -11,5 +11,5 @@ package practicetest;
  * @author khalloway
  */
 public interface RegisterStrat {
-    
+    public abstract void printReceipt();
 }

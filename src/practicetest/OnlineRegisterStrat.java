@@ -11,5 +11,10 @@ package practicetest;
  * @author khalloway
  */
 public class OnlineRegisterStrat implements RegisterStrat{
+    private DataStrat data;
+    private Receipt receipt;
     
+    public void printReceipt(){
+        return;
+    }
 }

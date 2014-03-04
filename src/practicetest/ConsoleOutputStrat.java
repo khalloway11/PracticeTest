@@ -10,7 +10,11 @@ package practicetest;
  *
  * @author khalloway
  */
-public interface DiscountStrat {
-    public abstract double getDiscountedPrice(double price, int quantity);
-    public abstract double getAmountSaved(double price, int quantity);
+public class ConsoleOutputStrat {
+    public void printOutput(Customer c, LineItem[] l){
+        System.out.println(c.getCustId() + "\t" + c.getFirstName() + "\t" + c.getLastName());
+        for(LineItem item: l){
+            
+        }
+    }
 }

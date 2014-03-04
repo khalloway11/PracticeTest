@@ -55,6 +55,11 @@ public class Product {
         this.price = price;
     }
     
+    public double getProdDiscountedPrice(int quantity){
+        return strat.getDiscountedPrice(price, quantity);
+    }
     
-    
+    public double getProdAmountSaved(int quantity){
+        return strat.getAmountSaved(price, quantity);
+    }
 }

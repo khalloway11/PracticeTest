@@ -10,7 +10,6 @@ package practicetest;
  *
  * @author khalloway
  */
-public interface DiscountStrat {
-    public abstract double getDiscountedPrice(double price, int quantity);
-    public abstract double getAmountSaved(double price, int quantity);
+public interface OutputStrategy {
+    public abstract void printOutput(Customer c, LineItem[] l);
 }

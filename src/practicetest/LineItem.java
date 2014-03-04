@@ -13,10 +13,12 @@ package practicetest;
 public class LineItem {
     private Product product;
     private double quantity;
+    private double subtotal;
     
     public LineItem(Product p, double quantity){
         this.setProduct(p);
         this.setQuantity(quantity);
+        this.calculateSubtotal();
     }
 
     public Product getProduct() {
@@ -34,7 +36,14 @@ public class LineItem {
     public void setQuantity(double quantity) {
         this.quantity = quantity;
     }
+
+    public double getSubtotal() {
+        return subtotal;
+    }
     
+    public void calculateSubtotal() {
+        this.subtotal = product.getProdDiscountedPrice(quantity);
+    }
     
     
 }

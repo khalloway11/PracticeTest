@@ -13,6 +13,7 @@ package practicetest;
 public class Receipt {
     private Customer customer;
     private LineItem[] lineItems;
+    private OutputStrategy output;
     
     public Receipt(Customer customer){
         this.setCustomer(customer);
@@ -26,19 +27,9 @@ public class Receipt {
         lineItems = temp;
     }
     
-    public void printReceipt(){
-        double price;
-        double quantity;
-        for(LineItem lineitem: lineItems){
-            price = lineitem.getProduct().getPrice();
-            quantity = lineitem.getQuantity();
-            System.out.print(lineitem.getProduct().getProdId() + "/t");
-            System.out.print(lineitem.getProduct().getProdDescription() + "/t");
-            System.out.print(price + "/t");
-            System.out.print(quantity + "/t");
-            System.out.print((price * quantity) + "/t");
-        }
-    }
+//    public void printReceipt(){
+//        output.printOutput(customer, lineItems);
+//    }
 
     public Customer getCustomer() {
         return customer;

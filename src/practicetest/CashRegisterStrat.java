@@ -14,4 +14,12 @@ public class CashRegisterStrat implements RegisterStrat{
     private DataStrat data;
     private Receipt receipt;
     
+    public void printReceipt(){
+        //receipt.printReceipt();
+    }
+    
+    public void addItem(Product p, double quantity){
+        receipt.addToLineItems(new LineItem(p, quantity));
+    }
+    
 }

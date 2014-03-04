@@ -22,16 +22,16 @@ public class PercentDiscountStrat implements DiscountStrat{
     }
 
     public void setDiscountPercent(double discountPercent) {
-        this.discountPercent = discountPercent;
+        this.discountPercent = (discountPercent/100);
     }
     
     @Override
-    public double getDiscountedPrice(Product p, int quantity){
-        return (p.getPrice() * quantity) * (1 - discountPercent);
+    public double getDiscountedPrice(double price, int quantity){
+        return (price * quantity) * (1 - discountPercent);
     }
     
     @Override
-    public double getAmountSaved(Product p, int quantity){
-        return (p.getPrice() * quantity) * discountPercent;
+    public double getAmountSaved(double price, int quantity){
+        return (price * quantity) * discountPercent;
     }
 }
