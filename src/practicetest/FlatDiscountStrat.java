@@ -25,10 +25,10 @@ public class FlatDiscountStrat implements DiscountStrat{
         this.discountRate = discountRate;
     }
     
-    public double getDiscountedPrice(double price, int quantity){
+    public double getDiscountedPrice(double price, double quantity){
         return (price * quantity) - (quantity * this.getDiscountRate());
     }
-    public double getAmountSaved(double price, int quantity){
+    public double getAmountSaved(double price, double quantity){
         return (quantity * this.getDiscountRate());
     }
 }

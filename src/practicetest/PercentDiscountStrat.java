@@ -26,12 +26,12 @@ public class PercentDiscountStrat implements DiscountStrat{
     }
     
     @Override
-    public double getDiscountedPrice(double price, int quantity){
+    public double getDiscountedPrice(double price, double quantity){
         return (price * quantity) * (1 - discountPercent);
     }
     
     @Override
-    public double getAmountSaved(double price, int quantity){
+    public double getAmountSaved(double price, double quantity){
         return (price * quantity) * discountPercent;
     }
 }
