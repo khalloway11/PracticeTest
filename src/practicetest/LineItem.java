@@ -14,11 +14,13 @@ public class LineItem {
     private Product product;
     private double quantity;
     private double subtotal;
+    private double amtSaved;
     
     public LineItem(Product p, double quantity){
         this.setProduct(p);
         this.setQuantity(quantity);
         this.calculateSubtotal();
+        this.calculateSaved();
     }
 
     public Product getProduct() {
@@ -41,9 +43,16 @@ public class LineItem {
         return subtotal;
     }
     
-    public void calculateSubtotal() {
+    public double getAmtSaved(){
+        return amtSaved;
+    }
+    
+    private void calculateSubtotal() {
         this.subtotal = product.getProdDiscountedPrice(quantity);
     }
     
+    private void calculateSaved(){
+        this.amtSaved = product.getProdAmountSaved(quantity);
+    }
     
 }
