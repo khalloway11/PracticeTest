@@ -12,4 +12,5 @@ package practicetest;
  */
 public interface RegisterStrat {
     public abstract void printReceipt();
+    public abstract void addItem(Product p, double quantity);
 }

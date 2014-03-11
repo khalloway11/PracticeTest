@@ -17,4 +17,8 @@ public class OnlineRegisterStrat implements RegisterStrat{
     public void printReceipt(){
         return;
     }
+    
+    public void addItem(Product p, double quantity){
+        receipt.addToLineItems(new LineItem(p, quantity));
+    }
 }

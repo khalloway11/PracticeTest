@@ -46,4 +46,31 @@ public class FakeDatabase implements DataStrat{
         }
         return null;
     }
+    
+    public void addProduct(Product p){
+        if(products.length == 0){
+            products = new Product[1];
+            products[0] = p;
+        } else {
+            Product[] temp = new Product[products.length +1];
+            System.arraycopy(products, 0, temp, 0, products.length);
+            temp[products.length] = p;
+            products = temp;
+            temp = null;
+        }
+        
+    }
+    
+    public void addCustomer(Customer c){
+        if(customers.length == 0){
+            customers = new Customer[1];
+            customers[0] = c;
+        } else {
+            Customer[] temp = new Customer[customers.length +1];
+            System.arraycopy(customers, 0, temp, 0, customers.length);
+            temp[customers.length] = c;
+            customers = temp;
+            temp = null;
+        }
+    }
 }
